@@ -1,110 +1,141 @@
-Laporan Hasil Pengerjaan UTS Pemrograman Web 1
+# BookHaven – Website Toko Buku
 
-Sistem Aplikasi Web Pemesanan Buku Online (BookStore.id)
+## Identitas Mahasiswa
 
-📌 Data Mahasiswa
+- **Nama:** Aditiya Yoga Pratama
+- **NIM:** 312510300
+- **Kelas:** I125C
+- **Mata Kuliah:** Pemrograman Web
+- **Program Studi:** Teknik Informatika
+- **Institusi:** Universitas Pelita Bangsa
 
-Nama: Aditiya Yoga pratama
+## Deskripsi Project
 
-Mata Kuliah: Pemrograman Web 1
+BookHaven merupakan website toko buku yang dibuat untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
 
-Topik Tugas: Front-End Pemesanan Buku Online
+Website ini dirancang untuk membantu pengguna melihat katalog buku, melakukan pemesanan, mengelola stok buku, serta memantau status pesanan. Website dibuat menggunakan HTML, CSS, dan JavaScript.
 
-🛠️ Ringkasan Project & Arsitektur Sistem
+## Fitur Website
 
-Aplikasi ini merupakan antarmuka web front-end sederhana namun interaktif yang dirancang untuk mengelola pemesanan buku online. Data dalam aplikasi disimulasikan menggunakan struktur JSON lokal yang disimpan pada file JavaScript terpisah (data.js).
+1. **Login Pengguna**  
+   Pengguna dapat masuk ke website menggunakan email dan password yang telah disediakan.
 
-Indikator Capaian Pembelajaran yang Dipenuhi:
+2. **Dashboard**  
+   Menampilkan halaman utama setelah pengguna berhasil login.
 
-Struktur HTML Semantik & Valid: Menggunakan elemen HTML5 terstruktur seperti <header>, <nav>, <form>, <table>, dan <section>.
+3. **Katalog Buku**  
+   Menampilkan daftar buku beserta nama, kategori, harga, stok, dan gambar buku.
 
-Pengelolaan Gaya Antarmuka (CSS): Desain antarmuka bersih dan responsif menggunakan variabel CSS, layouting grid/flexbox, shadow, dan animasi interaksi pengguna.
+4. **Pencarian Buku**  
+   Pengguna dapat mencari buku berdasarkan nama, kategori, atau kode buku.
 
-Manipulasi DOM & JavaScript: Implementasi manipulasi elemen DOM dinamis, validasi formulir input, respons waktu lokal (greeting), modal box, serta progress bar status pengiriman.
+5. **Manajemen Stok**  
+   Admin dapat menambahkan dan menghapus data buku.
 
-📂 Struktur Folder Project
+6. **Checkout**  
+   Pengguna dapat memilih buku, menentukan jumlah pembelian, memilih metode pengiriman, dan membuat pesanan.
 
-Struktur folder dibangun secara modular sesuai ketentuan tugas:
+7. **Tracking Pesanan**  
+   Pengguna dapat melihat informasi pesanan berdasarkan nomor DO atau NIM.
 
+8. **Penyimpanan Data**  
+   Data buku dan pesanan disimpan menggunakan Local Storage pada browser.
+
+## Akun Pengguna
+
+| Nama | Email | Password | Role |
+|---|---|---|---|
+| Siti | siti@gmail.com | siti123 | Admin |
+| Rama | rama@gmail.com | rama123 | CIO |
+| Rina | rina@gmail.com | rina123 | Customer |
+| Agus | agus@gmail.com | agus123 | Customer |
+
+## Teknologi yang Digunakan
+
+- HTML
+- CSS
+- JavaScript
+- Local Storage
+- Visual Studio Code
+
+## Struktur Folder
+
+```text
 tugas-uts-web1/
-├── index.html        (Halaman Utama Login & Modal Box)
-├── dashboard.html    (Dashboard Navigasi & Dynamic Greeting)
-├── stok.html         (Katalog Stok & Form Tambah Buku DOM)
-├── tracking.html     (Lacak Status Pengiriman & Progress Bar)
-├── checkout.html     (Formulir Pemesanan & Pembayaran)
-├── README.md         (Dokumentasi Laporan Project)
+│
 ├── css/
-│   └── style.css     (Pengaturan Gaya UI Modern)
+│   └── style.css
+│
+├── img/
+│   ├── kepemimpinan.jpg
+│   ├── manajemen_keuangan.jpg
+│   ├── mikrobiologi.jpg
+│   ├── paud_perkembangan.jpg
+│   └── pengantar_komunikasi.jpg
+│
 ├── js/
-│   ├── data.js       (Penyimpanan Data Dummy JSON Terpisah)
-│   └── script.js     (Logika Event, DOM, & Interaktivitas UI)
-└── img/
-    ├── buku1.png     (Asset Gambar Sampul Buku 1)
-    └── buku2.png     (Asset Gambar Sampul Buku 2)
+│   ├── data.js
+│   └── script.js
+│
+├── index.html
+├── dashboard.html
+├── stok.html
+├── checkout.html
+├── tracking.html
+│
+└── README.md
+```
 
+## Dokumentasi Codingan
 
-🚀 Fitur & Fungsionalitas Aplikasi
+### 1. File index.html
 
-1. Halaman Login (index.html)
+File ini digunakan sebagai halaman login website BookHaven.
 
-Fitur Email & Password: Kredensial default untuk pengujian:
+![Screenshot index.html](<Screenshot 2026-11-02 170910.png>)
 
-Email: admin@toko.com
+### 2. File dashboard.html
 
-Password: 123456
+File ini merupakan halaman dashboard yang ditampilkan setelah pengguna berhasil login.
 
-Validasi Alert: Jika data yang diinput salah/kosong, JavaScript akan merespon dengan pesan peringatan/alert Email/password yang anda masukkan salah.
+![Screenshot dashboard.html](<Screenshot 2026-11-02 171455.png>)
 
-Modal Box Interaktif: Terdapat tombol Lupa Password dan Daftar Akun yang memicu munculnya jendela Modal Box transparan (menggunakan manipulasi CSS display: flex/none via JavaScript DOM).
+### 3. File stok.html
 
-2. Dashboard Menu (dashboard.html)
+File ini digunakan untuk menampilkan dan mengelola data stok buku.
 
-Header & Navigasi: Menu navigasi antar halaman yang konsisten di bagian atas.
+![Screenshot stok.html](<Screenshot 2026-11-02 171607.png>)
 
-Dynamic Local Time Greeting: Menampilkan salam pengenal (Pagi / Siang / Sore / Malam) yang berganti secara otomatis dengan membaca waktu perangkat user menggunakan fungsi new Date().getHours().
+### 4. File checkout.html
 
-Grid Navigation: Tombol kartu pintas menuju seluruh halaman operasional toko.
+File ini digunakan untuk melakukan proses pemesanan buku.
 
-3. Informasi Stok / Katalog (stok.html)
+![Screenshot checkout.html](<Screenshot 2026-11-02 171715.png>)
 
-Render Dynamic JSON Data: Data buku di-load secara dinamis dari objek array dataKatalog pada file data.js ke dalam elemen tabel HTML via DOM manipulation.
+### 5. File tracking.html
 
-Form Tambah Stok Baru: Fitur untuk menambahkan baris katalog buku baru ke dalam tabel secara real-time tanpa refresh halaman.
+File ini digunakan untuk melacak status pesanan menggunakan nomor DO atau NIM.
 
-4. Halaman Pemesanan (checkout.html)
+![Screenshot tracking.html](<Screenshot 2026-11-02 171843.png>)
 
-Form Checkout: Isian data pemesan (Nama, Alamat, No. Telp) dan detail pembelian (Pilihan Buku, Jumlah, dan Metode Pembayaran).
+### 6. File css/style.css
 
-Konfirmasi Transaksi: Merespon aksi submit formulir dan mengarahkan pengguna secara otomatis ke halaman tracking pengiriman.
+File CSS digunakan untuk mengatur tampilan website, seperti warna, layout, tombol, kartu buku, tabel, dan tampilan halaman.
 
-5. Informasi Pengiriman (tracking.html)
+![Screenshot style.css](<Screenshot 2026-11-02 172015.png>)
 
-Pencarian Nomor DO: Fitur input Nomor Delivery Order (Kode pengujian: DO12345 atau DO67890).
+### 7. File js/data.js
 
-Progress Bar Status Pengiriman: Menggambarkan persentase proses delivery order secara visual menggunakan elemen progress bar.
+File ini berisi data pengguna dan data buku yang digunakan pada website BookHaven.
 
-Rincian Ekspedisi: Menampilkan detail pemesan, jenis paket, ekspedisi, tanggal pengiriman, dan total pembayaran.
+![Screenshot data.js](<Screenshot 2026-11-02 172131.png>)
 
-🎥 Panduan Presentasi Video UTS (Maksimal 15 Menit)
+### 8. File js/script.js
 
-Alur penyampaian yang dapat digunakan saat merekam video penjelasan:
+File JavaScript digunakan untuk menjalankan fungsi website, seperti login, pencarian buku, pengelolaan stok, checkout, dan tracking pesanan.
 
-Pendahuluan & Struktur File (00:00 - 02:00): Perkenalan diri, tujuan aplikasi, dan demonstrasi keutuhan struktur folder project.
+![Screenshot script.js](<Screenshot 2026-11-02 172242.png>)
 
-Demo Login & Modal Box (02:00 - 04:30): Memperlihatkan validasi form salah (alert) dan fungsionalitas pop-up Modal Box.
+## Kesimpulan
 
-Demo Dashboard & Local Time (04:30 - 06:30): Menjelaskan logika logika JavaScript pengubah kalimat greeting berdasarkan jam lokal.
-
-Demo Katalog & DOM (06:30 - 09:30): Penjelasan mengenai pemisahan data.js serta fungsi renderKatalog() dan tambahStok().
-
-Demo Checkout & Tracking (09:30 - 13:00): Memperlihatkan alur pengisian pesanan hingga lacak resi dengan Progress Bar.
-
-Penutup (13:00 - 15:00): Kesimpulan keterhubungan HTML, CSS, dan JS dalam aplikasi.
-
-✒️ Kesimpulan
-
-Aplikasi web ini telah memenuhi seluruh kriteria indikator penilaian UTS Pemrograman Web 1, mulai dari penerapan struktur HTML semantik, estetika layouting CSS, modularitas file data JSON, hingga manipulasi DOM dan logika
-
-
-
-Lnk youtube: https://youtu.be/erEwBTHbHz8   
+Dengan dibuatnya website BookHaven, pengguna dapat melihat katalog buku dan melakukan pemesanan secara digital. Website ini juga menyediakan fitur pengelolaan stok serta tracking pesanan. Project ini menjadi penerapan dasar HTML, CSS, dan JavaScript dalam pembuatan website toko buku.
